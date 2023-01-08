@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web HackerMode</title>
+</head>
+<body>
+  <div class="msg">Scaneando perfil</div>
+  <div id="console"></div>
+
+<script>
+  var intervalID = window.setInterval( updateScreen, 400 )
+  var c = document.getElementById("console")
+
+  var txt = [
+    "FORCE: XX002. ENCRYPTING:// IP 198.156.1.1",
+    "TRYPASS: ********* AUTH CODE: ALPHA GAMA: 1_____ PRIOTITY",
+    "RETRY: GETTING **PASSWORDS**",
+    ":ESCALING :PERMISSIONS:",
+    "TRANSFERRING __BITCOINS__ // **EXECUTE** //",
+    "================== 50% ==================",
+    "==========SCANNING FILES==========",
+    "SCANNING NUMBR3R WH4TS4PP ***148 4545 5656***",
+    "---INFORMATION FOUND---",
+    "USERNAME: */FRANCO_RUT1GL14N0/*-* PASSWORD =/******",
+    "---BACKDOOR CREATED--- (23.45.12.00000000000)",
+    "---BACKDOOR CREATED--- (23.46.12.00000000000)",
+    "---BACKDOOR CREATED--- (23.47.12.00000000000)",
+    "---BACKDOOR CREATED--- (23.48.12.00000000000)",
+    "---TRANSFERRING---",
+    "___-...___",
+    "___.-..___",
+    "___..-.___",
+    "___...-___",
+    "-------- COMPLETE --------",
+    "THANKS YOU <3 ;)",
+    "//_/_/::/  BYE /:/:/:/_/:"
+  ]
+  var docfrag = document.createDocumentFragment()
+
+  function updateScreen(){
+    txt.push(txt.shift())
+    //reconstruir fragmento del documento
+    txt.forEach(function(e){
+      var p = document.createElement("p")
+      p.textContent = e
+      docfrag.appendChild(p)
+    })
+    while(c.firstChild){
+      c.removeChild(c.firstChild)
+    }
+    c.appendChild(docfrag)
+  }
+
+</script>
+</body>
+</html>
