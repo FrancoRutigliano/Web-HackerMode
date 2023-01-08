@@ -21,5 +21,27 @@ p{
 }
 
 .msg{
+font-family: monospace;
+font-weight: bold;
+text-transform: uppercase;
+font-size: 4vh;
+padding-top: 5vh;
+background: red;
+box-shadow: 0 0 40px red;
+text-shadow: 0 0 20px white;
+width: 40vh;
+height: 15vh;
+position: absolute;
+left: 50%;
+margin-left: -10vh;
+top: 50%;
+margin-top: -5vh;
+text-align: center;
+min-width: 200px;
+animation: blink 0.8s infinite alternate linear;
+}
 
+@keyframes blink {
+  0%{opacity: 0%;}
+  100%{opacity: 100%;}
 }
